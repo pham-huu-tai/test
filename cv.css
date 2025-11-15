@@ -1,0 +1,97 @@
+/* GENERAL */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+.cv-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TABLE */
+.cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+/* HEADER */
+.cv-header th {
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* BODY CELLS */
+.cv-body-row td {
+    border: 1px solid black;
+    vertical-align: top;
+    padding: 20px;
+}
+
+/* COLUMN WIDTHS */
+.left-column { width: 35%; }
+.right-column { width: 65%; }
+
+/* PROFILE ICON */
+.profile-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-icon img {
+    width: 160px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* SECTION TITLES */
+section h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid black;
+}
+
+/* LISTS */
+ul {
+    padding-left: 20px;
+    margin-top: 6px;
+}
+
+/* MAIN HEADER RIGHT SIDE */
+.main-header h1 {
+    margin: 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+/* RESPONSIVE: MOBILE */
+@media (max-width: 700px) {
+    .cv-table,
+    .cv-table tr,
+    .cv-table td,
+    .cv-table th {
+        display: block;
+        width: 100%;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+}

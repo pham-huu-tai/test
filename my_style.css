@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    background: #003049 url('https://i.pinimg.com/736x/cf/e6/dd/cfe6dd5ec253e9cb5eaf6db5c6cf0354.jpg') 
+        no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.aquarium {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.element-list {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    z-index: 10;
+}
+
+.element-list li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #003049;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.element-list li:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+#animationButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 123, 255, 0.85);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-size: 16px;
+}
+
+#animationButton:hover {
+    background-color: rgba(0, 123, 255, 1);
+}
+
+img {
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+}
+
+.diver1, .diver2, .diver3,
+.faintSchool, .goldFishSchool,
+.shark, .turtle {
+    position: absolute;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+
+.diver1 {
+    width: 150px;
+    top: 30%;
+    animation: swim1 12s linear infinite;
+}
+
+.diver2 {
+    width: 150px;
+    top: 55%;
+    animation: swim2 14s linear infinite;
+}
+
+.diver3 {
+    width: 150px;
+    top: 70%;
+    animation: swim3 10s linear infinite;
+}
+
+.faintSchool {
+    width: 200px;
+    top: 40%;
+    animation: driftSchool 20s ease-in-out infinite;
+}
+
+.goldFishSchool {
+    width: 180px;
+    top: 20%;
+    animation: driftSchool2 18s ease-in-out infinite;
+}
+
+.shark {
+    width: 300px;
+    top: 50%;
+    animation: sharkSwim 22s linear infinite;
+}
+
+.turtle {
+    width: 200px;
+    top: 60%;
+    animation: turtleSwim 25s ease-in-out infinite;
+}
+
+@keyframes swim1 {
+    0%   { transform: translateX(-200px); }
+    100% { transform: translateX(calc(100vw - 200px)); }
+}
+
+@keyframes swim2 {
+    0%   { transform: translateX(calc(100vw - 200px)) scaleX(-1); }
+    100% { transform: translateX(-200px) scaleX(-1); }
+}
+
+@keyframes swim3 {
+    0%   { transform: translateX(-150px); }
+    100% { transform: translateX(calc(100vw + 150px)); }
+}
+
+@keyframes driftSchool {
+    0%   { transform: translateX(-250px); }
+    100% { transform: translateX(calc(100vw - 200px)); }
+}
+
+@keyframes driftSchool2 {
+    0%   { transform: translateX(calc(100vw - 180px)); }
+    100% { transform: translateX(-180px); }
+}
+
+@keyframes sharkSwim {
+    0%   { transform: translateX(-400px); }
+    100% { transform: translateX(calc(100vw + 400px)); }
+}
+
+@keyframes turtleSwim {
+    0%   { transform: translateX(calc(100vw + 300px)) scaleX(-1); }
+    100% { transform: translateX(-300px) scaleX(-1); }
+}
+
